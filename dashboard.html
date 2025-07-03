@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قطرات الغيث - لوحة التحكم</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/dashboard.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- رأس الموقع -->
+<header>
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/logo.png" alt="شعار قطرات الغيث" />
+      <div class="ms-2">
+        <div class="fw-bold fs-5">قطرات الغيث</div>
+        <small class="text-muted">Qatrat Alghaith</small>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">عن المؤسسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">مشاريعنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html">إنجازاتنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">التبرعات</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteers.html">المتطوعين</a></li>
+        <li class="nav-item"><a class="nav-link" href="statistics.html">الإحصائيات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+      </ul>
+      <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user-circle me-1"></i>
+          <span id="username">أحمد محمد</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item active" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> لوحة التحكم</a></li>
+          <li><a class="dropdown-item" href="dashboard.html#donations"><i class="fas fa-donate me-2"></i> تبرعاتي</a></li>
+          <li><a class="dropdown-item" href="dashboard.html#profile"><i class="fas fa-user-edit me-2"></i> الملف الشخصي</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="dashboard-container container py-5">
+  <div class="row">
+    <!-- القائمة الجانبية -->
+    <div class="col-lg-3 mb-4">
+      <div class="dashboard-sidebar p-3 rounded shadow-sm">
+        <div class="user-info text-center mb-4">
+          <div class="user-avatar mb-3">
+            <img src="https://via.placeholder.com/100" alt="صورة المستخدم" class="rounded-circle">
+          </div>
+          <h5 id="sidebar-username">أحمد محمد</h5>
+          <p class="text-muted small">عضو منذ يناير 2023</p>
+        </div>
+        <hr>
+        <ul class="nav flex-column dashboard-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#overview" data-bs-toggle="tab">
+              <i class="fas fa-home me-2"></i> نظرة عامة
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#donations" data-bs-toggle="tab">
+              <i class="fas fa-donate me-2"></i> تبرعاتي
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recurring" data-bs-toggle="tab">
+              <i class="fas fa-sync-alt me-2"></i> التبرعات الدورية
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certificates" data-bs-toggle="tab">
+              <i class="fas fa-certificate me-2"></i> شهادات التبرع
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#profile" data-bs-toggle="tab">
+              <i class="fas fa-user-edit me-2"></i> الملف الشخصي
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#notifications" data-bs-toggle="tab">
+              <i class="fas fa-bell me-2"></i> الإشعارات
+              <span class="badge bg-danger rounded-pill ms-2">3</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="col-lg-9">
+      <div class="tab-content">
+        <!-- نظرة عامة -->
+        <div class="tab-pane fade show active" id="overview">
+          <div class="dashboard-welcome p-4 rounded shadow-sm mb-4">
+            <h3>مرحباً بك، <span id="welcome-username">أحمد</span>!</h3>
+            <p>شكراً لدعمك المستمر لمؤسسة قطرات الغيث. من خلال لوحة التحكم هذه، يمكنك متابعة تبرعاتك وإدارة حسابك.</p>
+          </div>
+          
+          <div class="row g-4 mb-4">
+            <div class="col-md-4">
+              <div class="stat-card p-3 rounded shadow-sm text-center">
+                <i class="fas fa-donate fa-3x text-primary mb-2"></i>
+                <h4>1,250 ر.س</h4>
+                <p class="text-muted">إجمالي التبرعات</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="stat-card p-3 rounded shadow-sm text-center">
+                <i class="fas fa-hand-holding-heart fa-3x text-primary mb-2"></i>
+                <h4>5</h4>
+                <p class="text-muted">عدد المشاريع المدعومة</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="stat-card p-3 rounded shadow-sm text-center">
+                <i class="fas fa-sync-alt fa-3x text-primary mb-2"></i>
+                <h4>1</h4>
+                <p class="text-muted">تبرعات دورية نشطة</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="recent-activity p-4 rounded shadow-sm">
+            <h4 class="mb-3">آخر النشاطات</h4>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <i class="fas fa-donate text-primary me-2"></i>
+                  <span>تبرع لمشروع إغاثة غزة</span>
+                </div>
+                <div>
+                  <span class="badge bg-primary rounded-pill">500 ر.س</span>
+                  <small class="text-muted ms-2">منذ 3 أيام</small>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <i class="fas fa-sync-alt text-success me-2"></i>
+                  <span>تفعيل تبرع دوري لمشروع الماء</span>
+                </div>
+                <div>
+                  <span class="badge bg-success rounded-pill">100 ر.س شهرياً</span>
+                  <small class="text-muted ms-2">منذ أسبوع</small>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <i class="fas fa-donate text-primary me-2"></i>
+                  <span>تبرع لمشروع إغاثة اليمن</span>
+                </div>
+                <div>
+                  <span class="badge bg-primary rounded-pill">300 ر.س</span>
+                  <small class="text-muted ms-2">منذ شهر</small>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- تبرعاتي -->
+        <div class="tab-pane fade" id="donations">
+          <h3 class="mb-4">سجل تبرعاتي</h3>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="table-light">
+                <tr>
+                  <th>التاريخ</th>
+                  <th>المشروع</th>
+                  <th>المبلغ</th>
+                  <th>الحالة</th>
+                  <th>الإيصال</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>15/06/2023</td>
+                  <td>إغاثة غزة</td>
+                  <td>500 ر.س</td>
+                  <td><span class="badge bg-success">مكتمل</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download me-1"></i> تحميل</a></td>
+                </tr>
+                <tr>
+                  <td>10/06/2023</td>
+                  <td>مشروع الماء</td>
+                  <td>100 ر.س</td>
+                  <td><span class="badge bg-success">مكتمل</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download me-1"></i> تحميل</a></td>
+                </tr>
+                <tr>
+                  <td>22/05/2023</td>
+                  <td>إغاثة اليمن</td>
+                  <td>300 ر.س</td>
+                  <td><span class="badge bg-success">مكتمل</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download me-1"></i> تحميل</a></td>
+                </tr>
+                <tr>
+                  <td>05/05/2023</td>
+                  <td>مشروع الغذاء</td>
+                  <td>250 ر.س</td>
+                  <td><span class="badge bg-success">مكتمل</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download me-1"></i> تحميل</a></td>
+                </tr>
+                <tr>
+                  <td>18/04/2023</td>
+                  <td>إغاثة السودان</td>
+                  <td>100 ر.س</td>
+                  <td><span class="badge bg-success">مكتمل</span></td>
+                  <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download me-1"></i> تحميل</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <!-- التبرعات الدورية -->
+        <div class="tab-pane fade" id="recurring">
+          <h3 class="mb-4">التبرعات الدورية</h3>
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="card-title mb-0">مشروع الماء</h5>
+                <span class="badge bg-success">نشط</span>
+              </div>
+              <p class="card-text">تبرع دوري شهري بقيمة 100 ر.س</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <small class="text-muted">تاريخ البدء: 10/06/2023</small><br>
+                  <small class="text-muted">التجديد التالي: 10/07/2023</small>
+                </div>
+                <div>
+                  <button class="btn btn-sm btn-outline-danger"><i class="fas fa-pause me-1"></i> إيقاف مؤقت</button>
+                  <button class="btn btn-sm btn-outline-primary ms-2"><i class="fas fa-edit me-1"></i> تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="card-title mb-0">إغاثة غزة</h5>
+                <span class="badge bg-secondary">متوقف</span>
+              </div>
+              <p class="card-text">تبرع دوري شهري بقيمة 200 ر.س</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <small class="text-muted">تاريخ البدء: 15/03/2023</small><br>
+                  <small class="text-muted">تاريخ الإيقاف: 15/05/2023</small>
+                </div>
+                <div>
+                  <button class="btn btn-sm btn-success"><i class="fas fa-play me-1"></i> إعادة تفعيل</button>
+                  <button class="btn btn-sm btn-outline-primary ms-2"><i class="fas fa-edit me-1"></i> تعديل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="donate.html" class="btn btn-primary"><i class="fas fa-plus me-2"></i> إنشاء تبرع دوري جديد</a>
+          </div>
+        </div>
+        
+        <!-- شهادات التبرع -->
+        <div class="tab-pane fade" id="certificates">
+          <h3 class="mb-4">شهادات التبرع</h3>
+          <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>
+            يمكنك تحميل شهادات التبرع الخاصة بك لاستخدامها في الإقرار الضريبي أو لأغراض أخرى.
+          </div>
+          
+          <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="card-title">شهادة تبرع - 2023</h5>
+                <p class="card-text text-muted">إجمالي التبرعات: 1,250 ر.س</p>
+              </div>
+              <a href="#" class="btn btn-primary"><i class="fas fa-download me-2"></i> تحميل الشهادة</a>
+            </div>
+          </div>
+          
+          <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="card-title">شهادة تبرع - مشروع إغاثة غزة</h5>
+                <p class="card-text text-muted">قيمة التبرع: 500 ر.س</p>
+              </div>
+              <a href="#" class="btn btn-primary"><i class="fas fa-download me-2"></i> تحميل الشهادة</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- الملف الشخصي -->
+        <div class="tab-pane fade" id="profile">
+          <h3 class="mb-4">الملف الشخصي</h3>
+          <div class="card">
+            <div class="card-body">
+              <form id="profile-form">
+                <div class="row mb-3">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="profile-name" class="form-label">الاسم الكامل</label>
+                    <input type="text" class="form-control" id="profile-name" value="أحمد محمد">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="profile-email" class="form-label">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="profile-email" value="ahmed@example.com">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="profile-phone" class="form-label">رقم الهاتف</label>
+                    <input type="tel" class="form-control" id="profile-phone" value="0501234567">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="profile-id" class="form-label">رقم الهوية</label>
+                    <input type="text" class="form-control" id="profile-id" value="1234567890">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="profile-address" class="form-label">العنوان</label>
+                  <textarea class="form-control" id="profile-address" rows="3">الرياض، المملكة العربية السعودية</textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="profile-avatar" class="form-label">تغيير الصورة الشخصية</label>
+                  <input type="file" class="form-control" id="profile-avatar">
+                </div>
+                <hr>
+                <h5 class="mb-3">تغيير كلمة المرور</h5>
+                <div class="row mb-3">
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <label for="current-password" class="form-label">كلمة المرور الحالية</label>
+                    <input type="password" class="form-control" id="current-password">
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <label for="new-password" class="form-label">كلمة المرور الجديدة</label>
+                    <input type="password" class="form-control" id="new-password">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="confirm-password" class="form-label">تأكيد كلمة المرور</label>
+                    <input type="password" class="form-control" id="confirm-password">
+                  </div>
+                </div>
+                <div class="text-end">
+                  <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <!-- الإشعارات -->
+        <div class="tab-pane fade" id="notifications">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="mb-0">الإشعارات</h3>
+            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-check-double me-1"></i> تعليم الكل كمقروء</button>
+          </div>
+          
+          <div class="list-group">
+            <div class="list-group-item list-group-item-action unread">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">تم استلام تبرعك بنجاح</h5>
+                <small class="text-muted">منذ 3 أيام</small>
+              </div>
+              <p class="mb-1">شكراً لتبرعك بمبلغ 500 ر.س لمشروع إغاثة غزة. تم إصدار إيصال التبرع.</p>
+              <small><a href="#donations">عرض التفاصيل</a></small>
+            </div>
+            
+            <div class="list-group-item list-group-item-action unread">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">تم تفعيل التبرع الدوري</h5>
+                <small class="text-muted">منذ أسبوع</small>
+              </div>
+              <p class="mb-1">تم تفعيل تبرعك الدوري لمشروع الماء بنجاح. سيتم خصم مبلغ 100 ر.س شهرياً.</p>
+              <small><a href="#recurring">عرض التفاصيل</a></small>
+            </div>
+            
+            <div class="list-group-item list-group-item-action unread">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">تحديث مشروع إغاثة غزة</h5>
+                <small class="text-muted">منذ 10 أيام</small>
+              </div>
+              <p class="mb-1">تم توزيع المساعدات الغذائية والطبية على 500 عائلة في غزة بفضل تبرعاتكم.</p>
+              <small><a href="projects.html">عرض المشروع</a></small>
+            </div>
+            
+            <div class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">شكراً لتبرعك</h5>
+                <small class="text-muted">منذ شهر</small>
+              </div>
+              <p class="mb-1">شكراً لتبرعك بمبلغ 300 ر.س لمشروع إغاثة اليمن. تم إصدار إيصال التبرع.</p>
+              <small><a href="#donations">عرض التفاصيل</a></small>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <h5>إعدادات الإشعارات</h5>
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="email-notifications" checked>
+              <label class="form-check-label" for="email-notifications">إشعارات البريد الإلكتروني</label>
+            </div>
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="sms-notifications" checked>
+              <label class="form-check-label" for="sms-notifications">إشعارات الرسائل النصية</label>
+            </div>
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="project-updates" checked>
+              <label class="form-check-label" for="project-updates">تحديثات المشاريع</label>
+            </div>
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="donation-reminders" checked>
+              <label class="form-check-label" for="donation-reminders">تذكيرات التبرع</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- تذييل الموقع -->
+<footer class="bg-dark text-white py-4 mt-auto">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div>
+      <h5>قطرات الغيث</h5>
+      <p class="small mb-0">© 2025 قطرات الغيث. جميع الحقوق محفوظة.</p>
+    </div>
+    <div class="small">
+      <p class="mb-1"><i class="fas fa-envelope"></i> qataratalghaith2025@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +62 877 7881 76336</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

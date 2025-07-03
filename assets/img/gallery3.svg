@@ -1,0 +1,7 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0195b9" opacity="0.2"/>
+  <rect x="10" y="10" width="380" height="280" rx="15" fill="#0195b9" opacity="0.3" stroke="#0195b9" stroke-width="2"/>
+  <circle cx="200" cy="150" r="50" fill="#0195b9" opacity="0.6"/>
+  <rect x="50" y="50" width="300" height="200" rx="20" fill="none" stroke="#0195b9" stroke-width="5" opacity="0.7"/>
+  <text x="200" y="150" font-family="Arial" font-size="24" text-anchor="middle" fill="#0195b9">صورة معرض 3</text>
+</svg>

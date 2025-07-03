@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قطرات الغيث - الرئيسية</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/hero.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- شريط التبرع العاجل -->
+<div class="urgent-bar d-flex justify-content-center align-items-center gap-3 glassmorph">
+  <span>تبرع الآن لإنقاذ حياة في غزة</span>
+  <a href="donate.html#urgent" class="btn btn-light btn-sm">تبرع عاجل</a>
+</div>
+
+<!-- رأس الموقع -->
+<header>
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/logo.png" alt="شعار قطرات الغيث" />
+      <div class="ms-2">
+        <div class="fw-bold fs-5">قطرات الغيث</div>
+        <small class="text-muted">Qatrat Alghaith</small>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">عن المؤسسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">مشاريعنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html">إنجازاتنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">التبرعات</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteers.html">المتطوعين</a></li>
+        <li class="nav-item"><a class="nav-link" href="statistics.html">الإحصائيات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+      </ul>
+      <!-- قسم تسجيل الدخول / لوحة التحكم -->
+      <div class="d-flex align-items-center gap-2">
+        <div id="guest-view">
+          <a href="login.html" class="btn btn-outline-primary me-2"><i class="fas fa-sign-in-alt me-1"></i> تسجيل الدخول</a>
+        </div>
+        <div id="user-view" class="d-none">
+          <div class="dropdown">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle me-1"></i>
+              <span id="username">اسم المستخدم</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> لوحة التحكم</a></li>
+              <li><a class="dropdown-item" href="dashboard.html#donations"><i class="fas fa-donate me-2"></i> تبرعاتي</a></li>
+              <li><a class="dropdown-item" href="dashboard.html#profile"><i class="fas fa-user-edit me-2"></i> الملف الشخصي</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="donate.html" class="btn btn-primary">تبرع الآن</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- قسم الترحيب الرئيسي -->
+<section class="hero-section reveal-on-scroll glassmorph">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">معاً لنصنع الفرق في حياة المحتاجين</h1>
+      <p class="hero-subtitle">نعمل على توفير المساعدات الإنسانية والإغاثية للمناطق المتضررة حول العالم</p>
+      <div class="hero-buttons">
+        <a href="donate.html" class="btn btn-primary btn-lg"><i class="fas fa-hand-holding-heart me-2"></i>تبرع الآن</a>
+        <a href="volunteers.html" class="btn btn-outline-light btn-lg"><i class="fas fa-users me-2"></i>انضم إلينا</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- المشاريع العاجلة -->
+<section id="urgent-projects" class="py-5 bg-white container reveal-on-scroll glassmorph">
+  <h2 class="text-center mb-5 fw-bold">المشاريع العاجلة</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="position-relative">
+          <img src="assets/img/gaza.jpg" class="card-img-top" alt="مشروع غزة" />
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2 px-3 py-2">عاجل</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">إغاثة غزة</h5>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> مستمر</small>
+            <small class="text-success"><i class="fas fa-users me-1"></i> 45,000+ مستفيد</small>
+          </div>
+          <p class="card-text">توفير الماء والغذاء والدواء للمتضررين في ظل الأزمة الإنسانية الحالية.</p>
+          <div class="progress mb-3" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <small>75% مكتمل</small>
+            <small>الهدف: 1,000,000 ر.س</small>
+          </div>
+          <a href="donate.html?cause=gaza" class="btn btn-outline-primary w-100"><i class="fas fa-hand-holding-heart me-1"></i> ساهم الآن</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="position-relative">
+          <img src="assets/img/yemen.jpg" class="card-img-top" alt="مشروع اليمن" />
+          <span class="badge bg-warning position-absolute top-0 end-0 m-2 px-3 py-2">مستمر</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">إغاثة اليمن</h5>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> مستمر</small>
+            <small class="text-success"><i class="fas fa-users me-1"></i> 30,000+ مستفيد</small>
+          </div>
+          <p class="card-text">توفير المأوى والغذاء للمحتاجين وتقديم المساعدات الطبية العاجلة.</p>
+          <div class="progress mb-3" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <small>60% مكتمل</small>
+            <small>الهدف: 800,000 ر.س</small>
+          </div>
+          <a href="donate.html?cause=yemen" class="btn btn-outline-primary w-100"><i class="fas fa-hand-holding-heart me-1"></i> ساهم الآن</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="position-relative">
+          <img src="assets/img/sudan.jpg" class="card-img-top" alt="مشروع السودان" />
+          <span class="badge bg-info position-absolute top-0 end-0 m-2 px-3 py-2">جديد</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">إغاثة السودان</h5>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> جديد</small>
+            <small class="text-success"><i class="fas fa-users me-1"></i> 15,000+ مستفيد</small>
+          </div>
+          <p class="card-text">دعم البنية التحتية والتنمية وتوفير الاحتياجات الأساسية للمتضررين.</p>
+          <div class="progress mb-3" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <small>35% مكتمل</small>
+            <small>الهدف: 500,000 ر.س</small>
+          </div>
+          <a href="donate.html?cause=sudan" class="btn btn-outline-primary w-100"><i class="fas fa-hand-holding-heart me-1"></i> ساهم الآن</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="projects.html" class="btn btn-primary px-4">عرض جميع المشاريع <i class="fas fa-arrow-left me-1"></i></a>
+  </div>
+</section>
+
+<!-- الإحصاءات -->
+<section id="stats" class="py-5 bg-light container reveal-on-scroll glassmorph">
+  <h2 class="text-center mb-5 fw-bold">أثرنا حتى الآن</h2>
+  <div class="row text-center g-4">
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat-card p-4 rounded shadow-sm h-100">
+        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+        <h3 class="counter" data-count="150000">0</h3>
+        <p class="mb-0">مستفيد</p>
+        <small class="text-muted">في 15 دولة حول العالم</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat-card p-4 rounded shadow-sm h-100">
+        <i class="fas fa-water fa-3x text-primary mb-3"></i>
+        <h3 class="counter" data-count="270000">0</h3>
+        <p class="mb-0">لتر ماء</p>
+        <small class="text-muted">تم توفيره للمحتاجين</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat-card p-4 rounded shadow-sm h-100">
+        <i class="fas fa-bread-slice fa-3x text-primary mb-3"></i>
+        <h3 class="counter" data-count="30000">0</h3>
+        <p class="mb-0">رغيف خبز</p>
+        <small class="text-muted">تم توزيعه على المحتاجين</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <div class="stat-card p-4 rounded shadow-sm h-100">
+        <i class="fas fa-hands-helping fa-3x text-primary mb-3"></i>
+        <h3 class="counter" data-count="84">0</h3>
+        <p class="mb-0">تكية</p>
+        <small class="text-muted">تم إنشاؤها في مناطق مختلفة</small>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="statistics.html" class="btn btn-outline-primary px-4">عرض جميع الإحصائيات <i class="fas fa-chart-bar me-1"></i></a>
+  </div>
+</section>
+
+<!-- قسم الأخبار -->
+<section id="news-section" class="py-5 bg-white container reveal-on-scroll glassmorph">
+  <h2 class="text-center mb-5 fw-bold">آخر الأخبار</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="news-card h-100">
+        <img src="assets/img/news1.svg" alt="خبر عاجل 1" class="news-img">
+        <h3 class="news-title2">بدء حملة إغاثة عاجلة في غزة</h3>
+        <p class="news-date"><i class="fas fa-calendar-alt me-2"></i>15 يونيو 2025</p>
+        <p class="news-desc">انطلقت حملة إغاثة عاجلة في غزة لتوفير المساعدات الطبية والغذائية للمتضررين من الأزمة الإنسانية.</p>
+        <a href="#" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="news-card h-100">
+        <img src="assets/img/news2.svg" alt="خبر عاجل 2" class="news-img">
+        <h3 class="news-title2">انضم إلى فريق المتطوعين الآن</h3>
+        <p class="news-date"><i class="fas fa-calendar-alt me-2"></i>10 يونيو 2025</p>
+        <p class="news-desc">نحن بحاجة إلى متطوعين في مختلف المجالات للمساعدة في تنفيذ مشاريعنا الإنسانية وإحداث فرق حقيقي.</p>
+        <a href="volunteers.html" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="news-card h-100">
+        <img src="assets/img/news3.svg" alt="خبر عاجل 3" class="news-img">
+        <h3 class="news-title2">توزيع 5000 سلة غذائية في اليمن</h3>
+        <p class="news-date"><i class="fas fa-calendar-alt me-2"></i>5 يونيو 2025</p>
+        <p class="news-desc">تم توزيع 5000 سلة غذائية في اليمن الأسبوع الماضي ضمن مشروع الإغاثة العاجلة للأسر المتضررة.</p>
+        <a href="#" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="#" class="btn btn-primary px-4">عرض جميع الأخبار <i class="fas fa-newspaper me-1"></i></a>
+  </div>
+</section>
+
+<!-- معرض الصور -->
+<section id="gallery-section" class="py-5 bg-light container reveal-on-scroll glassmorph">
+  <h2 class="text-center mb-5 fw-bold">معرض الصور</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <img src="assets/img/gallery1.jpeg" alt="صورة معرض 1" class="gallery-img w-100">
+    </div>
+    <div class="col-md-4">
+      <img src="assets/img/gallery2.jpeg" alt="صورة معرض 2" class="gallery-img w-100">
+    </div>
+    <div class="col-md-4">
+      <img src="assets/img/gallery3.jpeg" alt="صورة معرض 3" class="gallery-img w-100">
+    </div>
+    <div class="col-md-6">
+      <img src="assets/img/gallery4.jpeg" alt="صورة معرض 4" class="gallery-img w-100">
+    </div>
+    <div class="col-md-6">
+      <img src="assets/img/gallery1.jpeg" alt="صورة معرض 5" class="gallery-img w-100">
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="#" class="btn btn-primary px-4">عرض المزيد من الصور <i class="fas fa-images me-1"></i></a>
+  </div>
+</section>
+
+<!-- قسم الشهادات والتقييمات -->
+<section id="testimonials" class="testimonials-section container reveal-on-scroll glassmorph">
+  <h2 class="text-center mb-5 fw-bold">ماذا يقول المستفيدون عنا</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="testimonial-card h-100">
+        <img src="assets/img/testimonial1.svg" alt="صورة المستفيد" class="testimonial-avatar" />
+        <div class="testimonial-text">
+          لقد كان لمساعدة قطرات الغيث أثر كبير في حياتنا. بفضلهم تمكنا من الحصول على مياه نظيفة لأول مرة منذ سنوات.
+        </div>
+        <div class="testimonial-author">أحمد محمود</div>
+        <div class="testimonial-role">من غزة، فلسطين</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="testimonial-card h-100">
+        <img src="assets/img/testimonial2.svg" alt="صورة المستفيد" class="testimonial-avatar" />
+        <div class="testimonial-text">
+          أشكر فريق قطرات الغيث على جهودهم المستمرة في توفير الغذاء والدواء لعائلتي خلال الأزمة التي نمر بها.
+        </div>
+        <div class="testimonial-author">سارة علي</div>
+        <div class="testimonial-role">من صنعاء، اليمن</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="testimonial-card h-100">
+        <img src="assets/img/testimonial3.svg" alt="صورة المستفيد" class="testimonial-avatar" />
+        <div class="testimonial-text">
+          لولا مساعدة قطرات الغيث لما تمكنت من إعادة بناء منزلي بعد الفيضانات. شكراً لكم على دعمكم المستمر.
+        </div>
+        <div class="testimonial-author">محمد عبدالله</div>
+        <div class="testimonial-role">من الخرطوم، السودان</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- قسم المتطوعين -->
+<section id="volunteers" class="py-5 bg-white container reveal-on-scroll glassmorph">
+  <h2 class="text-center mb-5 fw-bold">انضم إلى فريق المتطوعين</h2>
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <img src="assets/img/volunteers.jpg" alt="متطوعو قطرات الغيث" class="img-fluid rounded shadow-sm" />
+    </div>
+    <div class="col-lg-6">
+      <h3 class="mb-3">كن جزءًا من التغيير</h3>
+      <p class="lead mb-4">نحن بحاجة إلى متطوعين في مختلف المجالات للمساعدة في تنفيذ مشاريعنا الإنسانية وإحداث فرق حقيقي في حياة المحتاجين.</p>
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-hand-holding-medical text-primary fa-2x me-3"></i>
+            <div>
+              <h5 class="mb-1">مجال طبي</h5>
+              <p class="mb-0 small">أطباء ومسعفين ومتخصصين</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-truck text-primary fa-2x me-3"></i>
+            <div>
+              <h5 class="mb-1">مجال لوجستي</h5>
+              <p class="mb-0 small">توزيع وتخزين ونقل</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-bullhorn text-primary fa-2x me-3"></i>
+            <div>
+              <h5 class="mb-1">مجال إعلامي</h5>
+              <p class="mb-0 small">تصوير وتوثيق وتسويق</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-laptop-code text-primary fa-2x me-3"></i>
+            <div>
+              <h5 class="mb-1">مجال تقني</h5>
+              <p class="mb-0 small">برمجة وتصميم ودعم فني</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="volunteers.html" class="btn btn-primary px-4">انضم إلينا الآن <i class="fas fa-arrow-left me-1"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- الشركاء والداعمون -->
+<section id="partners" class="py-5 bg-light container reveal-on-scroll glassmorph">
+  <h2 class="text-center mb-5 fw-bold">الشركاء والداعمون</h2>
+  <p class="text-center mb-5">نفخر بشراكاتنا مع مؤسسات رائدة تشاركنا رؤيتنا في مساعدة المحتاجين حول العالم</p>
+  <div class="row justify-content-center align-items-center g-4">
+    <div class="col-6 col-md-2 text-center">
+      <div class="partner-card p-3 bg-white rounded shadow-sm">
+        <img src="assets/img/partner1.png" alt="شريك 1" class="img-fluid" />
+      </div>
+    </div>
+    <div class="col-6 col-md-2 text-center">
+      <div class="partner-card p-3 bg-white rounded shadow-sm">
+        <img src="assets/img/partner2.png" alt="شريك 2" class="img-fluid" />
+      </div>
+    </div>
+    <div class="col-6 col-md-2 text-center">
+      <div class="partner-card p-3 bg-white rounded shadow-sm">
+        <img src="assets/img/partner3.png" alt="شريك 3" class="img-fluid" />
+      </div>
+    </div>
+    <div class="col-6 col-md-2 text-center">
+      <div class="partner-card p-3 bg-white rounded shadow-sm">
+        <img src="assets/img/partner4.png" alt="شريك 4" class="img-fluid" />
+      </div>
+    </div>
+    <div class="col-6 col-md-2 text-center">
+      <div class="partner-card p-3 bg-white rounded shadow-sm">
+        <img src="assets/img/partner5.png" alt="شريك 5" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-5">
+    <p class="mb-3">هل ترغب في أن تصبح شريكًا لنا؟</p>
+    <a href="contact.html" class="btn btn-outline-primary">تواصل معنا <i class="fas fa-handshake me-1"></i></a>
+  </div>
+</section>
+
+<!-- تذييل الموقع -->
+<footer class="bg-dark text-white py-4 mt-auto">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div>
+      <h5>قطرات الغيث</h5>
+      <p class="small mb-0">© 2025 قطرات الغيث. جميع الحقوق محفوظة.</p>
+    </div>
+    <div class="small">
+      <p class="mb-1"><i class="fas fa-envelope"></i> qataratalghaith2025@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +62 877 7881 76336</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navbar.js"></script>
+</body>
+</html>

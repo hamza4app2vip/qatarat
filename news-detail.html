@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قطرات الغيث - تفاصيل الخبر</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/news-detail.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- شريط التبرع العاجل -->
+<div class="urgent-bar d-flex justify-content-center align-items-center gap-3 glassmorph">
+  <span>تبرع الآن لإنقاذ حياة في غزة</span>
+  <a href="donate.html#urgent" class="btn btn-light btn-sm">تبرع عاجل</a>
+</div>
+
+<!-- رأس الموقع -->
+<header>
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/logo.png" alt="شعار قطرات الغيث" />
+      <div class="ms-2">
+        <div class="fw-bold fs-5">قطرات الغيث</div>
+        <small class="text-muted">Qatrat Alghaith</small>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">عن المؤسسة</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">مشاريعنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html">إنجازاتنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">التبرعات</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteers.html">المتطوعين</a></li>
+        <li class="nav-item"><a class="nav-link" href="statistics.html">الإحصائيات</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+      </ul>
+      <!-- قسم تسجيل الدخول / لوحة التحكم -->
+      <div class="d-flex align-items-center gap-2">
+        <div id="guest-view">
+          <a href="login.html" class="btn btn-outline-primary me-2"><i class="fas fa-sign-in-alt me-1"></i> تسجيل الدخول</a>
+        </div>
+        <div id="user-view" class="d-none">
+          <div class="dropdown">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle me-1"></i>
+              <span id="username">اسم المستخدم</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> لوحة التحكم</a></li>
+              <li><a class="dropdown-item" href="dashboard.html#donations"><i class="fas fa-donate me-2"></i> تبرعاتي</a></li>
+              <li><a class="dropdown-item" href="dashboard.html#profile"><i class="fas fa-user-edit me-2"></i> الملف الشخصي</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="donate.html" class="btn btn-primary">تبرع الآن</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- محتوى الخبر -->
+<main class="container py-5">
+  <div class="news-detail-container glassmorph">
+    <div class="news-breadcrumb mb-4">
+      <nav aria-label="مسار التنقل">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+          <li class="breadcrumb-item"><a href="news.html">الأخبار</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="news-title-breadcrumb">عنوان الخبر</li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="news-header">
+      <h1 id="news-title" class="mb-3">عنوان الخبر</h1>
+      <div class="news-meta d-flex align-items-center gap-4 mb-4">
+        <div class="news-date"><i class="fas fa-calendar-alt me-2"></i><span id="news-date">15 يونيو 2025</span></div>
+        <div class="news-category"><i class="fas fa-tag me-2"></i><span id="news-category">فئة الخبر</span></div>
+        <div class="news-author"><i class="fas fa-user me-2"></i><span id="news-author">كاتب الخبر</span></div>
+      </div>
+    </div>
+
+    <div class="news-featured-image mb-4">
+      <img id="news-image" src="assets/img/news1.svg" alt="صورة الخبر" class="img-fluid rounded">
+    </div>
+
+    <div class="news-content">
+      <div id="news-content-full">
+        <p>انطلقت حملة إغاثة عاجلة في غزة لتوفير المساعدات الطبية والغذائية للمتضررين من الأزمة الإنسانية. وتهدف الحملة إلى الوصول إلى أكثر من 10,000 عائلة متضررة في مختلف مناطق قطاع غزة.</p>
+
+        <p>وقال مدير المشاريع في مؤسسة قطرات الغيث، السيد محمد الأحمد: "نسعى من خلال هذه الحملة إلى تخفيف معاناة أهلنا في غزة وتوفير الاحتياجات الأساسية لهم في ظل الظروف الصعبة التي يمرون بها".</p>
+
+        <h2>أهداف الحملة</h2>
+        <ul>
+          <li>توفير السلال الغذائية للعائلات المتضررة</li>
+          <li>تقديم المساعدات الطبية العاجلة للمصابين</li>
+          <li>توفير المياه الصالحة للشرب</li>
+          <li>دعم المستشفيات والمراكز الطبية بالمستلزمات الضرورية</li>
+        </ul>
+
+        <p>وأضاف الأحمد: "نحن بحاجة إلى دعم الجميع لإنجاح هذه الحملة وتحقيق أهدافها الإنسانية. كل تبرع، مهما كان صغيراً، سيساهم في إنقاذ حياة إنسان وإدخال الفرحة إلى قلوب العائلات المتضررة".</p>
+
+        <h2>كيفية المساهمة</h2>
+        <p>يمكن للراغبين في المساهمة في هذه الحملة التبرع من خلال:</p>
+        <ol>
+          <li>زيارة موقعنا الإلكتروني والتبرع مباشرة</li>
+          <li>التحويل البنكي إلى حساب المؤسسة</li>
+          <li>زيارة أحد مقرات المؤسسة</li>
+          <li>التواصل مع فريق خدمة المتبرعين على الرقم: 8001234567</li>
+        </ol>
+
+        <div class="news-cta text-center my-5">
+          <a href="donate.html?cause=gaza" class="btn btn-primary btn-lg px-5"><i class="fas fa-hand-holding-heart me-2"></i>تبرع الآن للحملة</a>
+        </div>
+
+        <h2>صور من الحملة</h2>
+        <div class="row g-4 mb-4">
+          <div class="col-md-4">
+            <img src="assets/img/gallery1.jpeg" alt="صورة من الحملة 1" class="img-fluid rounded">
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/gallery2.jpeg" alt="صورة من الحملة 2" class="img-fluid rounded">
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/gallery3.jpeg" alt="صورة من الحملة 3" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-share mt-5">
+      <h3>شارك الخبر</h3>
+      <div class="social-share d-flex gap-3 mt-3">
+        <a href="#" class="btn btn-outline-primary"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="btn btn-outline-info"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="btn btn-outline-success"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="btn btn-outline-secondary"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="related-news mt-5">
+      <h3>أخبار ذات صلة</h3>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="news-card h-100">
+            <img src="assets/img/news2.svg" alt="خبر ذو صلة 1" class="news-img">
+            <h3 class="news-title2">انضم إلى فريق المتطوعين الآن</h3>
+            <p class="news-date"><i class="fas fa-calendar-alt me-2"></i>10 يونيو 2025</p>
+            <p class="news-desc">نحن بحاجة إلى متطوعين في مختلف المجالات للمساعدة في تنفيذ مشاريعنا الإنسانية.</p>
+            <a href="news-detail.html?id=2" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="news-card h-100">
+            <img src="assets/img/news3.svg" alt="خبر ذو صلة 2" class="news-img">
+            <h3 class="news-title2">توزيع 5000 سلة غذائية في اليمن</h3>
+            <p class="news-date"><i class="fas fa-calendar-alt me-2"></i>5 يونيو 2025</p>
+            <p class="news-desc">تم توزيع 5000 سلة غذائية في اليمن الأسبوع الماضي ضمن مشروع الإغاثة العاجلة.</p>
+            <a href="news-detail.html?id=3" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="news-card h-100">
+            <img src="assets/img/gallery4.jpeg" alt="خبر ذو صلة 3" class="news-img">
+            <h3 class="news-title2">افتتاح مركز طبي جديد في السودان</h3>
+            <p class="news-date"><i class="fas fa-calendar-alt me-2"></i>1 يونيو 2025</p>
+            <p class="news-desc">تم افتتاح مركز طبي جديد في السودان لتقديم الخدمات الطبية للمحتاجين في المناطق النائية.</p>
+            <a href="news-detail.html?id=4" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ذيل الصفحة -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h3 class="mb-3">قطرات الغيث</h3>
+        <p>مؤسسة خيرية تسعى لتقديم المساعدات الإنسانية والإغاثية للمحتاجين حول العالم.</p>
+        <div class="social-icons d-flex gap-3 mt-3">
+          <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h3 class="mb-3">روابط سريعة</h3>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن المؤسسة</a></li>
+          <li><a href="projects.html">مشاريعنا</a></li>
+          <li><a href="donate.html">التبرعات</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h3 class="mb-3">تواصل معنا</h3>
+        <ul class="list-unstyled contact-info">
+          <li><i class="fas fa-map-marker-alt me-2"></i> المملكة العربية السعودية، الرياض</li>
+          <li><i class="fas fa-phone me-2"></i> 8001234567</li>
+          <li><i class="fas fa-envelope me-2"></i> info@qatrat-alghaith.org</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-md-0">© 2025 قطرات الغيث. جميع الحقوق محفوظة.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="text-white me-3">سياسة الخصوصية</a>
+        <a href="#" class="text-white">شروط الاستخدام</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/news-detail.js"></script>
+</body>
+</html>

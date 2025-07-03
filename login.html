@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تسجيل الدخول / إنشاء حساب</title>
+  <link href="assets/css/auth.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container" role="main" aria-label="صفحة تسجيل الدخول وإنشاء حساب">
+
+    <div class="left-panel" aria-hidden="true">
+      <div class="welcome-text">
+        مرحباً بك في <br />مؤسسة قطرات الغيث
+      </div>
+    </div>
+
+    <div class="right-panel">
+
+      <!-- نموذج تسجيل الدخول -->
+      <form id="login-form" aria-label="نموذج تسجيل الدخول">
+        <h2 class="form-title">تسجيل الدخول</h2>
+
+        <label for="login-email">البريد الإلكتروني</label>
+        <input type="email" id="login-email" name="login-email" placeholder="example@mail.com" required aria-required="true" />
+        <div class="error-message" id="login-email-error">يرجى إدخال بريد إلكتروني صالح.</div>
+
+        <label for="login-password">كلمة المرور</label>
+        <input type="password" id="login-password" name="login-password" placeholder="********" required aria-required="true" />
+        <div class="error-message" id="login-password-error">يرجى إدخال كلمة المرور.</div>
+
+        <button type="submit" class="btn">دخول</button>
+
+        <div class="toggle-link" id="show-register">ليس لديك حساب؟ إنشاء حساب</div>
+      </form>
+
+      <!-- نموذج إنشاء حساب -->
+      <form id="register-form" class="hidden" aria-label="نموذج إنشاء حساب">
+        <h2 class="form-title">إنشاء حساب جديد</h2>
+
+        <label for="register-name">الاسم الكامل</label>
+        <input type="text" id="register-name" name="register-name" placeholder="الاسم الكامل" required aria-required="true" />
+        <div class="error-message" id="register-name-error">يرجى إدخال الاسم الكامل.</div>
+
+        <label for="register-email">البريد الإلكتروني</label>
+        <input type="email" id="register-email" name="register-email" placeholder="example@mail.com" required aria-required="true" />
+        <div class="error-message" id="register-email-error">يرجى إدخال بريد إلكتروني صالح.</div>
+
+        <label for="register-password">كلمة المرور</label>
+        <input type="password" id="register-password" name="register-password" placeholder="********" required aria-required="true" />
+        <div class="error-message" id="register-password-error">يرجى إدخال كلمة المرور.</div>
+
+        <label for="register-password-confirm">تأكيد كلمة المرور</label>
+        <input type="password" id="register-password-confirm" name="register-password-confirm" placeholder="********" required aria-required="true" />
+        <div class="error-message" id="register-password-confirm-error">كلمة المرور غير متطابقة.</div>
+
+        <button type="submit" class="btn">إنشاء حساب</button>
+
+        <div class="toggle-link" id="show-login">لديك حساب؟ تسجيل الدخول</div>
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+
+</body>
+</html>

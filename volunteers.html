@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قطرات الغيث - المتطوعين</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <link href="assets/css/volunteers.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- رأس الموقع -->
+  <header>
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/logo.png" alt="شعار قطرات الغيث" />
+        <div class="ms-2">
+          <div class="fw-bold fs-5">قطرات الغيث</div>
+          <small class="text-muted">Qatrat Alghaith</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">عن المؤسسة</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">مشاريعنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="achievements.html">إنجازاتنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">التبرعات</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteers.html">المتطوعين</a></li>
+          <li class="nav-item"><a class="nav-link" href="statistics.html">الإحصائيات</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user-circle me-1"></i>
+            <span id="username">أحمد محمد</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item active" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> لوحة التحكم</a></li>
+            <li><a class="dropdown-item" href="dashboard.html#donations"><i class="fas fa-donate me-2"></i> تبرعاتي</a></li>
+            <li><a class="dropdown-item" href="dashboard.html#profile"><i class="fas fa-user-edit me-2"></i> الملف الشخصي</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="volunteers-section container py-5">
+    <h1 class="text-center mb-5">انضم إلى فريق المتطوعين</h1>
+
+    <!-- قسم الإحصائيات العامة للمتطوعين -->
+    <section class="volunteer-stats mb-5">
+      <h2 class="section-title">إحصائيات التطوع</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="1200">0</h3>
+            <p class="text-muted">عدد المتطوعين</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="25000">0</h3>
+            <p class="text-muted">ساعات التطوع</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="45">0</h3>
+            <p class="text-muted">مواقع التطوع</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-hands-helping fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="75">0</h3>
+            <p class="text-muted">فرص التطوع المتاحة</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم فرص التطوع -->
+    <section class="volunteer-opportunities mb-5">
+      <h2 class="section-title">فرص التطوع المتاحة</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="opportunity-card p-4 rounded shadow-sm">
+            <div class="opportunity-icon mb-3">
+              <i class="fas fa-hand-holding-medical fa-3x text-primary"></i>
+            </div>
+            <h3 class="opportunity-title">متطوع إغاثة طبية</h3>
+            <p class="opportunity-location"><i class="fas fa-map-marker-alt me-2"></i>غزة، فلسطين</p>
+            <p class="opportunity-description">نبحث عن متطوعين في المجال الطبي للمساعدة في تقديم الخدمات الصحية الأساسية للمتضررين.</p>
+            <div class="opportunity-details">
+              <span class="badge bg-primary">طبي</span>
+              <span class="badge bg-info">ميداني</span>
+              <span class="badge bg-success">متاح</span>
+            </div>
+            <a href="#volunteer-form" class="btn btn-outline-primary mt-3 w-100">تقدم للتطوع</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="opportunity-card p-4 rounded shadow-sm">
+            <div class="opportunity-icon mb-3">
+              <i class="fas fa-chalkboard-teacher fa-3x text-primary"></i>
+            </div>
+            <h3 class="opportunity-title">متطوع تعليمي</h3>
+            <p class="opportunity-location"><i class="fas fa-map-marker-alt me-2"></i>مخيمات اللاجئين، اليمن</p>
+            <p class="opportunity-description">نبحث عن متطوعين للمساعدة في تقديم الدعم التعليمي للأطفال في مخيمات اللاجئين.</p>
+            <div class="opportunity-details">
+              <span class="badge bg-primary">تعليمي</span>
+              <span class="badge bg-info">ميداني</span>
+              <span class="badge bg-success">متاح</span>
+            </div>
+            <a href="#volunteer-form" class="btn btn-outline-primary mt-3 w-100">تقدم للتطوع</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="opportunity-card p-4 rounded shadow-sm">
+            <div class="opportunity-icon mb-3">
+              <i class="fas fa-laptop-code fa-3x text-primary"></i>
+            </div>
+            <h3 class="opportunity-title">متطوع تقني</h3>
+            <p class="opportunity-location"><i class="fas fa-map-marker-alt me-2"></i>عن بعد</p>
+            <p class="opportunity-description">نبحث عن متطوعين في مجال التقنية للمساعدة في تطوير وصيانة المنصات الرقمية للمؤسسة.</p>
+            <div class="opportunity-details">
+              <span class="badge bg-primary">تقني</span>
+              <span class="badge bg-warning">عن بعد</span>
+              <span class="badge bg-success">متاح</span>
+            </div>
+            <a href="#volunteer-form" class="btn btn-outline-primary mt-3 w-100">تقدم للتطوع</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">عرض جميع الفرص</a>
+      </div>
+    </section>
+
+    <!-- قسم شهادات المتطوعين -->
+    <section class="volunteer-testimonials mb-5">
+      <h2 class="section-title">تجارب متطوعينا</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 rounded shadow-sm">
+            <div class="testimonial-image mb-3">
+              <img src="https://via.placeholder.com/100" alt="صورة المتطوع" class="rounded-circle">
+            </div>
+            <h4 class="testimonial-name">سارة أحمد</h4>
+            <p class="testimonial-role text-primary">متطوعة في مجال التعليم</p>
+            <p class="testimonial-text">"تجربة التطوع مع قطرات الغيث كانت من أجمل التجارب في حياتي. رؤية الابتسامة على وجوه الأطفال عندما يتعلمون شيئاً جديداً لا تقدر بثمن."</p>
+            <div class="testimonial-rating text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 rounded shadow-sm">
+            <div class="testimonial-image mb-3">
+              <img src="assets/img/wael.png" alt="صورة المتطوع" class="rounded-circle">
+            </div>
+            <h4 class="testimonial-name">محمد خالد</h4>
+            <p class="testimonial-role text-primary">متطوع في مجال الإغاثة</p>
+            <p class="testimonial-text">"العمل التطوعي مع قطرات الغيث غير نظرتي للحياة. المساهمة في إغاثة المحتاجين تجربة لا تنسى وأنصح الجميع بخوضها."</p>
+            <div class="testimonial-rating text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 rounded shadow-sm">
+            <div class="testimonial-image mb-3">
+              <img src="https://via.placeholder.com/100" alt="صورة المتطوع" class="rounded-circle">
+            </div>
+            <h4 class="testimonial-name">نورة سعيد</h4>
+            <p class="testimonial-role text-primary">متطوعة في مجال التقنية</p>
+            <p class="testimonial-text">"استخدام مهاراتي التقنية في خدمة العمل الإنساني كان حلماً تحقق من خلال التطوع مع قطرات الغيث. فخورة بكوني جزءاً من هذه المؤسسة."</p>
+            <div class="testimonial-rating text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- نموذج التسجيل للتطوع -->
+    <section class="volunteer-form-section mb-5" id="volunteer-form">
+      <h2 class="section-title">سجل كمتطوع</h2>
+      <div class="form-container p-4 rounded shadow-sm">
+        <form id="volunteer-registration-form" class="volunteer-form" novalidate>
+          <!-- معلومات شخصية -->
+          <div class="form-section mb-4">
+            <h3 class="form-section-title">المعلومات الشخصية</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="fullName">الاسم الكامل</label>
+                  <input type="text" id="fullName" name="fullName" class="form-control" placeholder="ادخل اسمك الكامل" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">البريد الإلكتروني</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="example@mail.com" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="phone">رقم الهاتف</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="مثال: 0501234567" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="birthdate">تاريخ الميلاد</label>
+                  <input type="date" id="birthdate" name="birthdate" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nationalId">رقم الهوية / الإقامة</label>
+                  <input type="text" id="nationalId" name="nationalId" class="form-control" placeholder="ادخل رقم الهوية" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="gender">الجنس</label>
+                  <select id="gender" name="gender" class="form-select" required>
+                    <option value="" disabled selected>اختر الجنس</option>
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- معلومات التطوع -->
+          <div class="form-section mb-4">
+            <h3 class="form-section-title">معلومات التطوع</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="volunteerType">مجال التطوع</label>
+                  <select id="volunteerType" name="volunteerType" class="form-select" required>
+                    <option value="" disabled selected>اختر المجال</option>
+                    <option value="medical">طبي</option>
+                    <option value="education">تعليمي</option>
+                    <option value="technical">تقني</option>
+                    <option value="logistics">لوجستي</option>
+                    <option value="media">إعلامي</option>
+                    <option value="other">أخرى</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="availability">الوقت المتاح للتطوع</label>
+                  <select id="availability" name="availability" class="form-select" required>
+                    <option value="" disabled selected>اختر الوقت المتاح</option>
+                    <option value="weekdays">أيام الأسبوع</option>
+                    <option value="weekends">عطلة نهاية الأسبوع</option>
+                    <option value="evenings">المساء فقط</option>
+                    <option value="flexible">مرن</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="location">موقع التطوع المفضل</label>
+                  <select id="location" name="location" class="form-select" required>
+                    <option value="" disabled selected>اختر الموقع</option>
+                    <option value="field">ميداني</option>
+                    <option value="remote">عن بعد</option>
+                    <option value="office">مكتبي</option>
+                    <option value="any">أي موقع</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="experience">الخبرة السابقة في التطوع</label>
+                  <select id="experience" name="experience" class="form-select" required>
+                    <option value="" disabled selected>اختر مستوى الخبرة</option>
+                    <option value="none">لا توجد خبرة سابقة</option>
+                    <option value="beginner">مبتدئ (أقل من سنة)</option>
+                    <option value="intermediate">متوسط (1-3 سنوات)</option>
+                    <option value="advanced">متقدم (أكثر من 3 سنوات)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="skills">المهارات والمؤهلات</label>
+                  <textarea id="skills" name="skills" class="form-control" rows="3" placeholder="اذكر مهاراتك ومؤهلاتك التي يمكن أن تفيد في العمل التطوعي"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="motivation">ما الذي يدفعك للتطوع معنا؟</label>
+                  <textarea id="motivation" name="motivation" class="form-control" rows="3" placeholder="اشرح دوافعك للتطوع مع مؤسسة قطرات الغيث" required></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- الموافقة على الشروط -->
+          <div class="form-section mb-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="termsAgreement" name="termsAgreement" required>
+              <label class="form-check-label" for="termsAgreement">
+                أوافق على <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">شروط وأحكام</a> التطوع مع مؤسسة قطرات الغيث
+              </label>
+            </div>
+          </div>
+
+          <div class="form-buttons text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-5">تقديم طلب التطوع</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="volunteer-faq mb-5">
+      <h2 class="section-title">الأسئلة الشائعة</h2>
+      <div class="accordion" id="volunteerFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ما هي متطلبات التطوع مع قطرات الغيث؟
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#volunteerFAQ">
+            <div class="accordion-body">
+              يجب أن يكون عمر المتطوع 18 عاماً فما فوق، ويمتلك الرغبة والالتزام بالعمل التطوعي. بعض الفرص التطوعية قد تتطلب مهارات أو خبرات محددة حسب طبيعة العمل.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              هل يمكنني التطوع عن بعد؟
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#volunteerFAQ">
+            <div class="accordion-body">
+              نعم، نوفر العديد من فرص التطوع عن بعد، خاصة في المجالات التقنية والإعلامية والترجمة وغيرها من المجالات التي لا تتطلب التواجد الميداني.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              كم عدد ساعات التطوع المطلوبة؟
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#volunteerFAQ">
+            <div class="accordion-body">
+              يختلف عدد ساعات التطوع حسب نوع الفرصة التطوعية. بعض الفرص تتطلب التزاماً أسبوعياً منتظماً، بينما البعض الآخر قد يكون لمرة واحدة أو لفترة محددة. يمكنك اختيار ما يناسب جدولك الزمني.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              هل أحصل على شهادة تطوع؟
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#volunteerFAQ">
+            <div class="accordion-body">
+              نعم، نقدم شهادات تطوع معتمدة لجميع المتطوعين بعد إكمال فترة التطوع المحددة. كما نوفر خطابات توصية للمتطوعين المتميزين.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal للشروط والأحكام -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel">شروط وأحكام التطوع</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body">
+          <h6>الالتزامات العامة للمتطوع:</h6>
+          <ul>
+            <li>الالتزام بأهداف المؤسسة وقيمها ومبادئها.</li>
+            <li>الالتزام بالمواعيد المحددة للعمل التطوعي.</li>
+            <li>المحافظة على سرية المعلومات الخاصة بالمؤسسة والمستفيدين.</li>
+            <li>احترام خصوصية المستفيدين وكرامتهم.</li>
+            <li>الالتزام بالتعليمات والإرشادات الصادرة من المؤسسة.</li>
+          </ul>
+          <h6>حقوق المتطوع:</h6>
+          <ul>
+            <li>الحصول على التدريب اللازم للقيام بالمهام التطوعية.</li>
+            <li>توفير بيئة عمل آمنة ومناسبة.</li>
+            <li>الحصول على شهادة تطوع بعد إكمال فترة التطوع.</li>
+            <li>التعويض عن المصاريف المعتمدة المرتبطة بالعمل التطوعي.</li>
+            <li>الحق في إنهاء التطوع في أي وقت مع إشعار المؤسسة مسبقاً.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal لتأكيد التسجيل -->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmationModalLabel">شكراً لتسجيلك!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fas fa-check-circle text-success fa-4x mb-3"></i>
+          <h4>تم استلام طلب التطوع بنجاح</h4>
+          <p>سيتم مراجعة طلبك والتواصل معك خلال 48 ساعة.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">حسناً</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+  <script src="assets/js/volunteers.js"></script>
+</body>
+</html>
