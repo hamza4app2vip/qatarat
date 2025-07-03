@@ -1,0 +1,238 @@
+:root {
+      --primary-color: #0195b9;
+      --primary-hover: #006a8c;
+      --background-color: #e6f0f6;
+      --input-bg: rgba(255, 255, 255, 0.4);
+      --input-border: rgba(1, 149, 185, 0.5);
+      --input-focus-border: #0195b9;
+      --error-color: #e74c3c;
+      --border-radius: 1rem;
+      --transition-speed: 0.35s cubic-bezier(.4,2.1,.6,.8);
+      --text-light: #fff;
+      --font-family: 'Cairo', sans-serif;
+      --glass-shadow: 0 8px 32px 0 rgba(1, 149, 185, 0.15);
+      --glass-shadow-hover: 0 12px 48px 0 rgba(1, 149, 185, 0.35);
+      --glass-border: 1.5px solid rgba(255, 255, 255, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background: linear-gradient(135deg, #cce6f7 0%, #e6f0f6 100%);
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: var(--border-radius);
+      box-shadow: var(--glass-shadow);
+      border: var(--glass-border);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease forwards;
+      user-select: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* الجانب الأيسر - صورة مع تأثير زجاجي */
+    .left-panel {
+      flex: 1;
+      background: url('https://i.ibb.co/v6bRGqB2/IMG-20250701-WA0041.jpg') center/cover no-repeat;
+      position: relative;
+      display: none;
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
+      box-shadow: inset 0 0 50px rgba(255,255,255,0.2);
+      transition: box-shadow var(--transition-speed);
+      cursor: default;
+    }
+
+    .left-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(1,149,185,0.7), rgba(1,149,185,0.4));
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
+      pointer-events: none;
+    }
+
+    .left-panel .welcome-text {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      color: var(--text-light);
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 80%;
+      z-index: 1;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      user-select: text;
+    }
+
+    .left-panel:hover {
+      box-shadow: inset 0 0 80px rgba(255,255,255,0.35);
+    }
+
+    /* الجانب الأيمن - النماذج */
+    .right-panel {
+      flex: 1;
+      padding: 3rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(255,255,255,0.35);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      box-shadow: inset 0 0 20px rgba(255,255,255,0.3);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .form-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+      text-align: center;
+      user-select: none;
+      text-shadow: 0 0 6px rgba(1,149,185,0.6);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: block;
+      color: var(--primary-color);
+      user-select: none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 0.85rem 1.2rem;
+      font-size: 1.1rem;
+      border: 1.8px solid var(--input-border);
+      border-radius: var(--border-radius);
+      background: var(--input-bg);
+      transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+      width: 100%;
+      color: #222;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+      user-select: text;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border-color: var(--input-focus-border);
+      box-shadow: 0 0 12px rgba(1, 149, 185, 0.6);
+      background: #fff;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
+      color: var(--text-light);
+      font-weight: 700;
+      padding: 0.9rem 0;
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color var(--transition-speed), transform 0.25s ease;
+      user-select: none;
+      box-shadow: 0 6px 18px rgba(1,149,185,0.4);
+    }
+
+    .btn:hover {
+      background: var(--primary-hover);
+      transform: scale(1.07);
+      outline: none;
+      box-shadow: 0 8px 25px rgba(1,149,185,0.6);
+    }
+
+    .toggle-link {
+      text-align: center;
+      margin-top: 1.3rem;
+      font-size: 1rem;
+      color: var(--primary-color);
+      cursor: pointer;
+      user-select: none;
+      transition: color var(--transition-speed);
+      user-select: none;
+    }
+
+    .toggle-link:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    /* أخطاء التحقق */
+    .error-message {
+      color: var(--error-color);
+      font-size: 0.9rem;
+      margin-top: -0.7rem;
+      margin-bottom: 0.6rem;
+      display: none;
+      user-select: none;
+    }
+
+    /* إخفاء نموذج */
+    .hidden {
+      display: none;
+    }
+
+    /* تجاوب */
+    @media (min-width: 768px) {
+      .left-panel {
+        display: block;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .container {
+        flex-direction: column;
+        border-radius: var(--border-radius);
+      }
+
+      .left-panel {
+        display: block;
+        height: 200px;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+      }
+
+      .right-panel {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        padding: 2rem 2rem 3rem;
+      }
+    }

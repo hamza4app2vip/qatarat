@@ -1,0 +1,10 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0195b9" opacity="0.2"/>
+  <rect x="10" y="10" width="380" height="280" rx="15" fill="#0195b9" opacity="0.3" stroke="#0195b9" stroke-width="2"/>
+  <rect x="40" y="40" width="320" height="60" rx="10" fill="#0195b9" opacity="0.6"/>
+  <rect x="40" y="120" width="320" height="10" rx="5" fill="#0195b9" opacity="0.4"/>
+  <rect x="40" y="140" width="320" height="10" rx="5" fill="#0195b9" opacity="0.4"/>
+  <rect x="40" y="160" width="320" height="10" rx="5" fill="#0195b9" opacity="0.4"/>
+  <rect x="40" y="180" width="200" height="10" rx="5" fill="#0195b9" opacity="0.4"/>
+  <text x="200" y="80" font-family="Arial" font-size="24" text-anchor="middle" fill="white">خبر عاجل 2</text>
+</svg>

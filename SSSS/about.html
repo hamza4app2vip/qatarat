@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>قطرات الغيث - عن المؤسسة</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="assets/css/style.css" rel="stylesheet" />
+<link href="assets/css/about.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- شريط التبرع العاجل -->
+<div class="urgent-bar d-flex justify-content-center align-items-center gap-3 glassmorph">
+  <span>تبرع الآن لإنقاذ حياة في غزة</span>
+  <a href="donate.html#urgent" class="btn btn-light btn-sm">تبرع عاجل</a>
+</div>
+
+<!-- رأس الموقع -->
+<header>
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/logo.png" alt="شعار قطرات الغيث" />
+      <div class="ms-2">
+        <div class="fw-bold fs-5">قطرات الغيث</div>
+        <small class="text-muted">Qatrat Alghaith</small>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">مشاريعنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html">إنجازاتنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">التبرعات</a></li>
+        <li class="nav-item"><a class="nav-link" href="volunteers.html">المتطوعين</a></li>
+        <li class="nav-item"><a class="nav-link" href="statistics.html">الإحصائيات</a></li>
+        
+      </ul>
+      <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user-circle me-1"></i>
+          <span id="username">أحمد محمد</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item active" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> لوحة التحكم</a></li>
+          <li><a class="dropdown-item" href="dashboard.html#donations"><i class="fas fa-donate me-2"></i> تبرعاتي</a></li>
+          <li><a class="dropdown-item" href="dashboard.html#profile"><i class="fas fa-user-edit me-2"></i> الملف الشخصي</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="glass-container" role="main" aria-label="محتوى حول المؤسسة">
+
+  <h1>حول المؤسسة</h1>
+  <p class="intro">نلتزم في مؤسستنا بتقديم أفضل الخدمات بأعلى معايير الجودة والاحترافية، مع التركيز على رضا عملائنا وتطوير المجتمع.</p>
+
+  <section>
+    <h2>من نحن</h2>
+    <p>تأسست مؤسستنا عام <strong>2010</strong> بهدف تقديم حلول مبتكرة ومستدامة في مجالنا. نعمل بفريق متخصص يسعى دائماً للتميز والابتكار لخدمة عملائنا بأفضل شكل ممكن.</p>
+  </section>
+
+  <section>
+    <h2>رسالتنا</h2>
+    <p>نهدف إلى تقديم خدمات متميزة تلبي احتياجات عملائنا وتساهم في تحقيق أهدافهم من خلال حلول مبتكرة ومستدامة، مع الحفاظ على أعلى معايير الجودة والمسؤولية الاجتماعية.</p>
+  </section>
+
+  <section>
+    <h2>قيمنا</h2>
+    <ul class="values-list" aria-label="قيم المؤسسة">
+      <li>الشفافية والنزاهة</li>
+      <li>الاحترافية والجودة</li>
+      <li>الابتكار والتطوير المستمر</li>
+      <li>الاحترام والتعاون</li>
+      <li>التركيز على العميل</li>
+    </ul>
+  </section>
+
+  <section class="founder-section" aria-label="معلومات عن المؤسس">
+    <div class="founder-photo">
+      <img src="assets/img/aaa.jpeg" alt="صورة المؤسس السيد أحمد العلي" />
+    </div>
+    <div class="founder-info">
+      <h3>الشيخ عبدالرحمن</h3>
+      <p class="title">مؤسس المؤسسة والرئيس التنفيذي</p>
+      <p class="bio">
+        بخبرة تزيد عن 20 عاماً في مجال الإدارة والتطوير المؤسسي، قاد الشيخ عبدالرحمن نحو النجاح والتميز. يؤمن بأهمية الابتكار والشفافية في بناء علاقات طويلة الأمد مع العملاء والشركاء. يكرس جهوده لتطوير فريق عمل متميز وتحقيق رؤية المؤسسة في خدمة المجتمع.
+      </p>
+    </div>
+  </section>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

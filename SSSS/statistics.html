@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قطرات الغيث - الإحصائيات والتقارير</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.css" rel="stylesheet" />
+  <link href="assets/css/statistics.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- رأس الموقع -->
+  <header>
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/logo.png" alt="شعار قطرات الغيث" />
+        <div class="ms-2">
+          <div class="fw-bold fs-5">قطرات الغيث</div>
+          <small class="text-muted">Qatrat Alghaith</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">عن المؤسسة</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">مشاريعنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="achievements.html">إنجازاتنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">التبرعات</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteers.html">المتطوعين</a></li>
+          <li class="nav-item"><a class="nav-link" href="statistics.html">الإحصائيات</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user-circle me-1"></i>
+            <span id="username">أحمد محمد</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item active" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> لوحة التحكم</a></li>
+            <li><a class="dropdown-item" href="dashboard.html#donations"><i class="fas fa-donate me-2"></i> تبرعاتي</a></li>
+            <li><a class="dropdown-item" href="dashboard.html#profile"><i class="fas fa-user-edit me-2"></i> الملف الشخصي</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#" id="logout-btn"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="statistics-section container py-5">
+    <h1 class="text-center mb-5">الإحصائيات والتقارير</h1>
+
+    <!-- قسم الإحصائيات العامة -->
+    <section class="general-stats mb-5">
+      <h2 class="section-title">الإحصائيات العامة</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-hand-holding-heart fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="25000">0</h3>
+            <p class="text-muted">إجمالي المستفيدين</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-donate fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="1500000">0</h3>
+            <p class="text-muted">إجمالي التبرعات (ر.س)</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-project-diagram fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="120">0</h3>
+            <p class="text-muted">عدد المشاريع المنفذة</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card p-4 rounded shadow-sm text-center">
+            <i class="fas fa-globe-asia fa-3x text-primary mb-3"></i>
+            <h3 class="counter" data-count="15">0</h3>
+            <p class="text-muted">عدد الدول المستفيدة</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الرسوم البيانية -->
+    <section class="charts-section mb-5">
+      <h2 class="section-title">الرسوم البيانية</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="chart-container p-4 rounded shadow-sm">
+            <h3 class="chart-title">توزيع التبرعات حسب المشاريع</h3>
+            <canvas id="projectsChart"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart-container p-4 rounded shadow-sm">
+            <h3 class="chart-title">نمو التبرعات الشهري</h3>
+            <canvas id="monthlyChart"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart-container p-4 rounded shadow-sm">
+            <h3 class="chart-title">توزيع المستفيدين حسب الفئة</h3>
+            <canvas id="beneficiariesChart"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart-container p-4 rounded shadow-sm">
+            <h3 class="chart-title">توزيع المشاريع حسب المناطق</h3>
+            <canvas id="regionsChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم التقارير السنوية -->
+    <section class="reports-section mb-5">
+      <h2 class="section-title">التقارير السنوية</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="report-card p-4 rounded shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-file-pdf fa-2x text-danger me-3"></i>
+              <h4>التقرير السنوي 2024</h4>
+            </div>
+            <p>تقرير شامل عن أنشطة وإنجازات المؤسسة خلال عام 2024.</p>
+            <a href="#" class="btn btn-outline-primary w-100"><i class="fas fa-download me-2"></i> تحميل التقرير</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="report-card p-4 rounded shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-file-pdf fa-2x text-danger me-3"></i>
+              <h4>التقرير السنوي 2023</h4>
+            </div>
+            <p>تقرير شامل عن أنشطة وإنجازات المؤسسة خلال عام 2023.</p>
+            <a href="#" class="btn btn-outline-primary w-100"><i class="fas fa-download me-2"></i> تحميل التقرير</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="report-card p-4 rounded shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-file-pdf fa-2x text-danger me-3"></i>
+              <h4>التقرير السنوي 2022</h4>
+            </div>
+            <p>تقرير شامل عن أنشطة وإنجازات المؤسسة خلال عام 2022.</p>
+            <a href="#" class="btn btn-outline-primary w-100"><i class="fas fa-download me-2"></i> تحميل التقرير</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الشفافية المالية -->
+    <section class="financial-transparency">
+      <h2 class="section-title">الشفافية المالية</h2>
+      <div class="transparency-container p-4 rounded shadow-sm">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="transparency-chart">
+              <h3>توزيع المصروفات</h3>
+              <canvas id="expensesChart"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="transparency-info">
+              <h3>التزامنا بالشفافية</h3>
+              <p>في مؤسسة قطرات الغيث، نلتزم بأعلى معايير الشفافية والمساءلة. نحرص على أن تكون جميع عملياتنا المالية واضحة ومتاحة للجميع.</p>
+              <ul class="transparency-list">
+                <li><i class="fas fa-check-circle text-success me-2"></i> 85% من التبرعات تذهب مباشرة للمستفيدين</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> 10% للمصاريف التشغيلية والإدارية</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> 5% للتطوير والاستدامة</li>
+              </ul>
+              <a href="#" class="btn btn-primary mt-3">عرض التفاصيل المالية الكاملة</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>
+        <h5 class="text-white">قطرات الغيث</h5>
+        <p class="text-muted small mb-0">© 2025 قطرات الغيث. جميع الحقوق محفوظة.</p>
+      </div>
+      <div class="text-muted small">
+        <p class="mb-1"><i class="fas fa-envelope"></i> qataratalghaith2025@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +62 877 7881 76336</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/statistics.js"></script>
+</body>
+</html>

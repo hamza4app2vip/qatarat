@@ -1,0 +1,218 @@
+/* تنسيقات صفحة تفاصيل الخبر */
+:root {
+  --main: #0195b9;
+  --main-dark: #01738f;
+  --main-light: #e6f7fb;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+  --radius: 16px;
+  --transition: 0.3s ease;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: var(--text-primary);
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* حاوية تفاصيل الخبر */
+.news-detail-container {
+  background: var(--bg-glass);
+  border-radius: var(--radius);
+  box-shadow: var(--glass-shadow);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  border: var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeIn 0.8s ease;
+}
+
+/* مسار التنقل */
+.breadcrumb a {
+  color: var(--main);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--main-dark);
+  text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--text-secondary);
+}
+
+/* عنوان الخبر */
+.news-header h1 {
+  color: var(--main-dark);
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* بيانات الخبر */
+.news-meta {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+}
+
+.news-meta i {
+  color: var(--main);
+}
+
+/* صورة الخبر الرئيسية */
+.news-featured-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition);
+}
+
+.news-featured-image img:hover {
+  transform: scale(1.02);
+}
+
+/* محتوى الخبر */
+.news-content {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.news-content h2 {
+  color: var(--main-dark);
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+  border-right: 4px solid var(--main);
+  padding-right: 0.8rem;
+}
+
+.news-content p {
+  margin-bottom: 1.5rem;
+}
+
+.news-content ul, .news-content ol {
+  margin-bottom: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.news-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* زر التبرع في الخبر */
+.news-cta .btn {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.news-cta .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(1, 149, 185, 0.3);
+}
+
+/* مشاركة الخبر */
+.news-share h3, .related-news h3 {
+  color: var(--main-dark);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--main-light);
+  padding-bottom: 0.5rem;
+}
+
+.social-share a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform var(--transition), background-color var(--transition);
+}
+
+.social-share a:hover {
+  transform: translateY(-5px);
+}
+
+/* أخبار ذات صلة */
+.related-news .news-card {
+  padding: 0;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.related-news .news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.related-news .news-img {
+  height: 180px;
+  margin-bottom: 0;
+  border-radius: 0;
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+
+.related-news .news-card .news-title2,
+.related-news .news-card .news-date,
+.related-news .news-card .news-desc,
+.related-news .news-card .news-link {
+  padding: 0 1rem;
+}
+
+.related-news .news-card .news-title2 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.related-news .news-card .news-desc {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.related-news .news-card .news-link {
+  margin: 0 1rem 1rem;
+  display: inline-block;
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* تجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .news-detail-container {
+    padding: 1.5rem;
+  }
+  
+  .news-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .news-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .news-content {
+    font-size: 1rem;
+  }
+  
+  .news-content h2 {
+    font-size: 1.5rem;
+  }
+}

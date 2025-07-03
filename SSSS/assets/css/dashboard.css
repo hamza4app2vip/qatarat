@@ -1,0 +1,226 @@
+/* ===========================
+   متغيرات التصميم العامة
+=========================== */
+:root {
+  --main: #0195b9;
+  --main-dark: #006a8c;
+  --accent: #f7e14d;
+  --bg-light: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 8px 32px 0 rgba(1, 149, 185, 0.15);
+  --glass-shadow-hover: 0 12px 48px 0 rgba(1, 149, 185, 0.35);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+  --text-dark: #222;
+  --text-light: #fff;
+  --radius: 16px;
+  --transition: 0.3s cubic-bezier(.4,2.1,.6,.8);
+  --font-family: 'Cairo', sans-serif;
+}
+
+/* ===========================
+   قاعدة عامة
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+/* ===========================
+   لوحة التحكم - الحاوية الرئيسية
+=========================== */
+.dashboard-container {
+  min-height: calc(100vh - 300px);
+  padding: 2rem;
+  background: var(--glass-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--glass-shadow);
+  border: var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+/* ===========================
+   القائمة الجانبية
+=========================== */
+.dashboard-sidebar {
+  background: var(--glass-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--glass-shadow);
+  border: var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  height: 100%;
+  padding: 1.5rem 1rem;
+  transition: box-shadow var(--transition), background var(--transition);
+  user-select: none;
+}
+
+.dashboard-sidebar:hover {
+  box-shadow: var(--glass-shadow-hover);
+}
+
+/* صورة المستخدم */
+.user-avatar img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--main);
+  padding: 3px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  user-select: none;
+}
+
+.user-avatar img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--main);
+}
+
+/* روابط القائمة الجانبية */
+.dashboard-nav .nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  color: #495057;
+  font-weight: 600;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  user-select: none;
+}
+
+.dashboard-nav .nav-link:hover {
+  background: rgba(1, 149, 185, 0.15);
+  color: var(--main);
+  box-shadow: 0 0 10px rgba(1, 149, 185, 0.3);
+  outline: none;
+}
+
+.dashboard-nav .nav-link.active {
+  background: var(--main);
+  color: var(--text-light);
+  box-shadow: 0 0 20px var(--main);
+  outline: none;
+}
+
+/* ===========================
+   المحتوى الرئيسي
+=========================== */
+.dashboard-welcome {
+  background: var(--glass-bg);
+  border-right: 4px solid var(--main);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-dark);
+  user-select: none;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.dashboard-welcome:hover {
+  box-shadow: var(--glass-shadow-hover);
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   بطاقات الإحصائيات
+=========================== */
+.stat-card {
+  background: var(--glass-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--glass-shadow);
+  border: var(--glass-border);
+  padding: 1.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+  cursor: default;
+  user-select: none;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+/* ===========================
+   النشاطات الأخيرة
+=========================== */
+.recent-activity {
+  background: var(--glass-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--glass-shadow);
+  padding: 1.5rem;
+  user-select: none;
+  transition: box-shadow var(--transition);
+}
+
+.recent-activity:hover {
+  box-shadow: var(--glass-shadow-hover);
+}
+
+/* ===========================
+   جدول التبرعات
+=========================== */
+.table th {
+  font-weight: 600;
+  color: var(--main-dark);
+  user-select: none;
+}
+
+/* ===========================
+   بطاقات التبرعات الدورية
+=========================== */
+.card {
+  background: var(--glass-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(1, 149, 185, 0.1);
+  border: var(--glass-border);
+  transition: box-shadow var(--transition), transform var(--transition);
+  user-select: none;
+}
+
+.card:hover {
+  box-shadow: var(--glass-shadow-hover);
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   الإشعارات
+=========================== */
+.list-group-item.unread {
+  border-right: 3px solid var(--main);
+  background-color: rgba(1, 149, 185, 0.1);
+  user-select: none;
+}
+
+.list-group-item {
+  transition: background-color var(--transition);
+  cursor: pointer;
+  user-select: none;
+}
+
+.list-group-item:hover {
+  background-color: rgba(1, 149, 185, 0.15);
+  outline: none;
+}
+
+/* ===========================
+   تجاوب Responsive
+=========================== */
+@media (max-width: 992px) {
+  .dashboard-sidebar {
+    margin-bottom: 2rem;
+  }
+}
